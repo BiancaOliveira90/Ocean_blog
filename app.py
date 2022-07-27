@@ -1,29 +1,30 @@
 from flask import Flask, render_template
+from datetime import datetime
 
 app = Flask("hello")
 
+posts = [
+    {
+        "title": "Meu primeiro Post",
+        "body": "Aqui é o texto do Post",
+        "author": "Bianca",
+        "created": datetime (2022, 7 ,25)
+    },
+    {
+       "title": "Meu segundo Post",
+        "body": "Aqui é o texto do Post",
+        "author": "Bianca",
+        "created": datetime (2022, 7 ,26)  
+    },
+
+        ]
+
 @app.route("/")
-@app.route("/hello")
-def hello():
-    return "Hello World"
-
-@app.route("/meucontato")
-def meuContato():
-    return render_template("index.html")
+def index():
+    return render_template("index.html", posts=posts)
 
 
-@app.route("/Dylan")
-def Dylan():
-    return """<html>
-    <head>
-         <title> Dylan </title>
-    </head>
-    <body>
-    <h1>Te amo bem grandão!</h1>
-    </body>
-    </html>"""
-      
-  
 
-     
+
+
     
