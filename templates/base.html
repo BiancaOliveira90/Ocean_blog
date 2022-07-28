@@ -1,18 +1,16 @@
 <html>
     <head>
-         <title> {% block title %} {% endblock %} - Ocean Blog </title>
-         <link rel="stylesheet" href="/static/style.css">
+        <title> {% block title %}{% endblock %} - Ocean Blog </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     </head>
 
     <body>
         <h1> Ocean Blog </h1>
         <nav>
         </nav>
-        
-        <section class="content" >
-            {% block content %} 
-            {% endblock %}  
-        </section>                  
-
+        <section class="content">
+            {% block content %}
+            {% endblock %}
+        </section>
     </body>
 </html>
