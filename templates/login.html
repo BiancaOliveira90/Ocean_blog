@@ -2,8 +2,11 @@
 
 {% block title %} Login {% endblock %}
 
-{% block content %}
+{% block header %}
+<h1>Log in</h1>
+{% endblock %}
 
+{% block content %}
 <form method="POST">
     <label for="username">Username: </label>
     <input id="username" name="username" required>
@@ -11,6 +14,4 @@
     <input id="password" name="password" required type="password">
     <input type="submit" value="Login">
 </form>
-
-
-{% endblock %}  
+{% endblock %}
